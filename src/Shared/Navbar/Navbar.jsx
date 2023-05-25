@@ -29,7 +29,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar py-5 rounded-xl bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -141,7 +141,7 @@ const Navbar = () => {
           )}
           {user?.email && (
             <li>
-              <Link to="/AddAToys" className="text-xl font-medium">
+              <Link to="/AddToys" className="text-xl font-medium">
                 Add a Toys
               </Link>
             </li>

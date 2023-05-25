@@ -3,15 +3,32 @@ import Main from "../Layout/Main";
 import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
+import AllToys from "../Component/AllToys/AllToys";
+import MyToys from "../Component/MyToys/MyToys";
+import AddToys from "../Component/AddToys/AddToys";
+import ErrorPage from "../Component/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/allToys",
+        element: <AllToys></AllToys>,
+      },
+      {
+        path: "/myToys",
+        element: <MyToys></MyToys>,
+      },
+      {
+        path: "/addToys",
+        element: <AddToys></AddToys>,
       },
       {
         path: "/login",
