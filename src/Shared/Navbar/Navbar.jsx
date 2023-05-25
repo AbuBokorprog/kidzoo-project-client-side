@@ -6,6 +6,7 @@ import { authContext } from "../../AuthProvider/AuthProvider";
 const Navbar = () => {
   const { user, loader, logOutUser } = useContext(authContext);
 
+  // user details
   let userProfile = "";
   let userName = "";
   if (user) {
