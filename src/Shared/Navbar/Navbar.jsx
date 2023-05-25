@@ -177,7 +177,7 @@ const Navbar = () => {
             />
           </Link>
         ) : (
-          <Link className="text-xl font-medium">
+          <Link to="/login" className="text-xl font-medium">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
