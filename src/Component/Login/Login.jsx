@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { user, loginUser, loader } = useContext(authContext);
+  const [success, setSuccess] = useState([]);
+  const [error, setError] = useState([]);
+
   const loginHandler = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    loginUser(email, password)
+      .then((loggedUser) => {
+        const user = loggedUser.user;
+        console.log(user);
+        setSuccess("Login successfully");
+        setError("");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+        setSuccess("");
+      });
   };
 
   return (
@@ -22,6 +39,10 @@ const Login = () => {
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <h1 className="text-5xl font-bold text-center py-3">Login now!</h1>
+          <div className="text-center">
+            <p className="text-success">{success}</p>
+            <p className="text-error">{error}</p>
+          </div>
           <form onSubmit={loginHandler} className="card-body">
             <div className="form-control">
               <label className="label">
