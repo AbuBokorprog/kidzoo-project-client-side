@@ -29,7 +29,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar py-5 rounded-xl bg-base-200">
+    <div className="navbar sticky top-0 py-5 rounded-xl bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -166,7 +166,7 @@ const Navbar = () => {
           )}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end pr-5">
         {user?.email ? (
           <Link className="text-xl font-medium">
             <img
