@@ -41,6 +41,11 @@ const Login = () => {
         setSuccess("");
       });
   };
+  if (loader) {
+    <div className="radial-progress" style={{ "--value": 70 }}>
+      70%
+    </div>;
+  }
 
   return (
     <div className="hero min-h-screen rounded-2xl bg-base-200 my-20">

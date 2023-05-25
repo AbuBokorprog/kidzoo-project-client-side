@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import svg from "../../assets/Red_blue_illustration_Kids_Toys_logo-removebg-preview.png";
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, loader, logOutUser } = useContext(authContext);
+
+  let userProfile = "";
+  let userName = "";
+  if (user) {
+    userProfile = user.photoURL;
+    userName = user.displayName;
+  }
+
+  const logOutHandler = () => {
+    logOutUser()
+      .then(() => {})
+      .catch((error) => {
+        const errorMessage = error.message;
+      });
+  };
+
+  if (loader) {
+    <div className="radial-progress" style={{ "--value": 70 }}>
+      70%
+    </div>;
+  }
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -37,26 +61,38 @@ const Navbar = () => {
                 All Toys
               </Link>
             </li>
-            <li>
-              <Link to="/myToys" className="text-xl font-medium">
-                My toys
-              </Link>
-            </li>
-            <li>
-              <Link to="/AddAToys" className="text-xl font-medium">
-                Add a Toys
-              </Link>
-            </li>
+            {user?.email && (
+              <li>
+                <Link to="/myToys" className="text-xl font-medium">
+                  My toys
+                </Link>
+              </li>
+            )}
+            {user?.email && (
+              <li>
+                <Link to="/AddAToys" className="text-xl font-medium">
+                  Add a Toys
+                </Link>
+              </li>
+            )}
             <li>
               <Link to="/blog" className="text-xl font-medium">
                 blog
               </Link>
             </li>
-            <li>
-              <Link to="/login" className="text-xl font-medium">
-                Login
-              </Link>
-            </li>
+            {user?.email ? (
+              <li>
+                <button onClick={logOutHandler} className="text-xl font-medium">
+                  LogOut
+                </button>
+              </li>
+            ) : (
+              <li>
+                <Link to="/login" className="text-xl font-medium">
+                  Login
+                </Link>
+              </li>
+            )}
             <li>
               <Link className="text-xl font-medium">
                 <svg
@@ -95,45 +131,68 @@ const Navbar = () => {
               All Toys
             </Link>
           </li>
-          <li>
-            <Link to="/myToys" className="text-xl font-medium">
-              My toys
-            </Link>
-          </li>
-          <li>
-            <Link to="/AddAToys" className="text-xl font-medium">
-              Add a Toys
-            </Link>
-          </li>
+          {user?.email && (
+            <li>
+              <Link to="/myToys" className="text-xl font-medium">
+                My toys
+              </Link>
+            </li>
+          )}
+          {user?.email && (
+            <li>
+              <Link to="/AddAToys" className="text-xl font-medium">
+                Add a Toys
+              </Link>
+            </li>
+          )}
           <li>
             <Link to="/blog" className="text-xl font-medium">
               blog
             </Link>
           </li>
-          <li>
-            <Link to="/login" className="text-xl font-medium">
-              Login
-            </Link>
-          </li>
+          {user?.email ? (
+            <li>
+              <button onClick={logOutHandler} className="text-xl font-medium">
+                LogOut
+              </button>
+            </li>
+          ) : (
+            <li>
+              <Link to="/login" className="text-xl font-medium">
+                Login
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="text-xl font-medium">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-8 h-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+        {user?.email ? (
+          <Link className="text-xl font-medium">
+            <img
+              className="w-10 rounded-3xl"
+              src={userProfile}
+              alt="Profile-Picture"
+              title={userName}
             />
-          </svg>
-        </Link>
+          </Link>
+        ) : (
+          <Link className="text-xl font-medium">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </Link>
+        )}
       </div>
     </div>
   );
