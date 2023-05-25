@@ -2,46 +2,51 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div>
-      <div className="carousel mt-10 w-full">
-        <div id="item1" className="carousel-item w-full">
-          <img
-            src="https://img.freepik.com/free-photo/non-binary-kids-playing-with-cars-game_23-2148779599.jpg?w=1060&t=st=1684983459~exp=1684984059~hmac=d2cac45c6a590df83ac793f929db8012d3bd4e933b70fe2ec9d803bc6470ef70"
-            className="w-full"
-          />
+    <div className="my-20">
+      <div className="flex gap-5 justify-center items-center">
+        <div className="w-1/2">
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              className="rounded-2xl"
+              src="https://img.freepik.com/free-photo/fun-trex-3d-illustration_183364-81258.jpg?size=626&ext=jpg&ga=GA1.2.825737080.1674060681&semt=ais"
+              alt=""
+            />
+            <img
+              className="rounded-2xl"
+              src="https://img.freepik.com/free-photo/vintage-miniature-car-fake-landscape_155003-1097.jpg?w=740&t=st=1685004672~exp=1685005272~hmac=53a311c9476381ec81e74e362102bb50f67fb575c8fdcbd7b96bf6bba932e687"
+              alt=""
+            />
+            <img
+              className="rounded-2xl"
+              src="https://img.freepik.com/premium-photo/car-crash-accident-traffic-road-insurance-claim-concept_39768-8268.jpg?w=900"
+              alt=""
+            />
+            <img
+              className="rounded-2xl"
+              src="https://img.freepik.com/premium-photo/many-colored-little-toy-cars-gray-background_188237-1375.jpg?w=900"
+              alt=""
+            />
+          </div>
         </div>
-        <div id="item2" className="carousel-item w-full">
-          <img
-            src="https://img.freepik.com/free-photo/kids-home-playing-with-toys_23-2148630637.jpg?w=826&t=st=1684983521~exp=1684984121~hmac=d0c7c4aacc9bd875cb4aa67ea2f292f03cad5e90d45a35afa790b73408c7b2df"
-            className="w-full"
-          />
+        <div className="w-1/2 py-20 rounded-2xl pl-5">
+          <h2 className="text-5xl font-bold mb-8">
+            Welcome to <span className="">KidZoo</span>!
+          </h2>
+          <p className="my-4">
+            Discover endless fun and adventure with our wide selection of toys
+            for kids of all ages. Shop Now for the perfect playtime companions
+            and let imaginations soar! <br />
+          </p>
+          <p>
+            <span className="text-red-600">
+              Free shipping on orders over $50. Sign up for our newsletter and
+              get 10% off your first purchase.
+            </span>
+          </p>
+          <div className="my-4">
+            <button className="btn-success btn bg-red-500">Buy Now</button>
+          </div>
         </div>
-        <div id="item3" className="carousel-item w-full">
-          <img
-            src="https://img.freepik.com/free-photo/high-angle-siblings-playing-with-toys_23-2148355142.jpg?w=900&t=st=1684983784~exp=1684984384~hmac=a8a23def0e9912f31386104c7ea73956490e0723f27640fc396b399bf9ea26e3"
-            className="w-full"
-          />
-        </div>
-        <div id="item4" className="carousel-item w-full">
-          <img
-            src="https://img.freepik.com/premium-photo/focused-kid-playing-with-dinosaurs-home-boy-learning-paleontology-by-dino-toys-leisure-concept-clever-child-early-education_159315-737.jpg?w=900"
-            className="w-full"
-          />
-        </div>
-      </div>
-      <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs">
-          1
-        </a>
-        <a href="#item2" className="btn btn-xs">
-          2
-        </a>
-        <a href="#item3" className="btn btn-xs">
-          3
-        </a>
-        <a href="#item4" className="btn btn-xs">
-          4
-        </a>
       </div>
     </div>
   );

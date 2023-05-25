@@ -1,11 +1,15 @@
 import React from "react";
 import Banner from "./Banner";
+import SubCategory from "./SubCategory";
 
 const Home = () => {
   return (
     <div>
       <div>
-      <Banner></Banner>
+        <Banner></Banner>
+      </div>
+      <div>
+        <SubCategory></SubCategory>
       </div>
     </div>
   );
