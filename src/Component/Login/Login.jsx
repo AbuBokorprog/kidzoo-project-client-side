@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-  const { user, loginUser, loader } = useContext(authContext);
+  const { user, loginUser, loader, googleLogin } = useContext(authContext);
   const [success, setSuccess] = useState([]);
   const [error, setError] = useState([]);
 
@@ -18,6 +19,20 @@ const Login = () => {
         const user = loggedUser.user;
         console.log(user);
         setSuccess("Login successfully");
+        setError("");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+        setSuccess("");
+      });
+  };
+
+  const googleLoggedIn = () => {
+    googleLogin()
+      .then((googleUser) => {
+        const user = googleUser.user;
+        setSuccess("logged in successfully");
         setError("");
       })
       .catch((error) => {
@@ -76,13 +91,21 @@ const Login = () => {
             </div>
             <div>
               <p>
-                Are you new here!{" "}
+                Are you new here!
                 <span className="text-blue-500 font-medium">
                   <Link to="/register">Register</Link>
                 </span>
               </p>
             </div>
           </form>
+          <div className="text-center mb-4">
+            <button onClick={googleLoggedIn} className=" btn-circle">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/281/281764.png?w=740&t=st=1684991750~exp=1684992350~hmac=814fdcbcfeee2217a058f357de671a4ef437adbcb010117ef618fe07cd865577"
+                alt="google"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>

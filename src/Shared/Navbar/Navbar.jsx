@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import svg from "../../assets/Red_blue_illustration_Kids_Toys_logo-removebg-preview.png";
-import { UserIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   return (
