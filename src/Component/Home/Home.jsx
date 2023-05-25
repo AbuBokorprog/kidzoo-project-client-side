@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "./Banner";
 import SubCategory from "./SubCategory";
 import GallerySection from "./GallerySection";
 import HomeBanner from "./HomeBanner/HomeBanner";
 import ShortDescriptionSection from "../ShortDescriptionSection/ShortDescriptionSection";
+import NewsLetter from "../NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
@@ -19,6 +19,9 @@ const Home = () => {
       </div>
       <div>
         <GallerySection></GallerySection>
+      </div>
+      <div>
+        <NewsLetter></NewsLetter>
       </div>
     </div>
   );

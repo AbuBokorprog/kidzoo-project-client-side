@@ -32,7 +32,7 @@ const ShortDescriptionSection = () => {
           <h2 className="text-5xl font-bold mb-8">
             We provide & offer premium service.
           </h2>
-          <p className="my-4">
+          <p className="my-4 text-gray-500">
             Our area of practice is quite wide: toy production, custom-made toys
             for every age, toy brand promotion, playrooms design with equipment,
             and of course kids camps and events! Contact us today and get a free
