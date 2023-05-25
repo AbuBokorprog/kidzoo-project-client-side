@@ -38,7 +38,7 @@ const Banner = () => {
             and let imaginations soar! <br />
           </p>
           <p>
-            <span className="text-red-600">
+            <span className="font-semibold text-red-600">
               Free shipping on orders over $50. Sign up for our newsletter and
               get 10% off your first purchase.
             </span>

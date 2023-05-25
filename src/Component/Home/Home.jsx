@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import SubCategory from "./SubCategory";
+import GallerySection from "./GallerySection";
 
 const Home = () => {
   return (
@@ -10,6 +11,9 @@ const Home = () => {
       </div>
       <div>
         <SubCategory></SubCategory>
+      </div>
+      <div>
+        <GallerySection></GallerySection>
       </div>
     </div>
   );

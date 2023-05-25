@@ -1,0 +1,149 @@
+[
+  {
+    "ToyName": "Turbo Racer",
+    "Subcategory": "Race Cars",
+    "Price": "$19.99",
+    "AvailableQuantity": 10,
+    "Image": "https://thumbs.dreamstime.com/b/hummer-4616126.jpg"
+  },
+  {
+    "ToyName": "Remote Speedster",
+    "Subcategory": "Remote-Controlled Cars",
+    "Price": "$29.99",
+    "AvailableQuantity": 5,
+    "Image": "https://example.com/images/remote_speedster.jpg"
+  },
+  {
+    "Toy Name": "Construction Crew",
+    "Sub-category": "Construction Vehicles",
+    "Price": "$24.99",
+    "Available Quantity": 8,
+    "Image": "https://example.com/images/construction_crew.jpg"
+  },
+  {
+    "ToyName": "Patrol Pursuit",
+    "Subcategory": "Police Cars",
+    "Price": "$14.99",
+    "AvailableQuantity": 12,
+    "Image": "https://example.com/images/patrol_pursuit.jpg"
+  },
+  {
+    "ToyName": "Rescue Response",
+    "Subcategory": "Fire Trucks",
+    "Price": "$17.99",
+    "AvailableQuantity": 6,
+    "Image": "https://example.com/images/rescue_response.jpg"
+  },
+  {
+    "ToyName": "AmbuSpeed",
+    "Subcategory": "Ambulances",
+    "Price": "$21.99",
+    "AvailableQuantity": 3,
+    "Image": "https://example.com/images/ambuspeed.jpg"
+  },
+  {
+    "ToyName": "Off-Road Warrior",
+    "Subcategory": "Off-Road Vehicles",
+    "Price": "$27.99",
+    "AvailableQuantity": 9,
+    "Image": "https://example.com/images/off_road_warrior.jpg"
+  },
+  {
+    "ToyName": "Supercharged Sprinter",
+    "Subcategory": "Sports Cars",
+    "Price": "$34.99",
+    "AvailableQuantity": 7,
+    "Image": "https://example.com/images/supercharged_sprinter.jpg"
+  },
+  {
+    "ToyName": "Vintage Cruiser",
+    "Subcategory": "Classic Cars",
+    "Price": "$31.99",
+    "AvailableQuantity": 4,
+    "Image": "https://example.com/images/vintage_cruiser.jpg"
+  },
+  {
+    "ToyName": "Monster Thrasher",
+    "Subcategory": "Monster Trucks",
+    "Price": "$39.99",
+    "AvailableQuantity": 2,
+    "Image": "https://example.com/images/monster_thrasher.jpg"
+  },
+  {
+    "ToyName": "Speed Demon",
+    "Subcategory": "Race Cars",
+    "Price": "$22.99",
+    "AvailableQuantity": 6,
+    "Image": "https://example.com/images/speed_demon.jpg"
+  },
+  {
+    "ToyName": "Super Stunt Racer",
+    "Subcategory": "Remote-Controlled Cars",
+    "Price": "$32.99",
+    "AvailableQuantity": 3,
+    "Image": "https://example.com/images/super_stunt_racer.jpg"
+  },
+  {
+    "ToyName": "Dump Truck Deluxe",
+    "Subcategory": "Construction Vehicles",
+    "Price": "$27.99",
+    "AvailableQuantity": 8,
+    "Image": "https://example.com/images/dump_truck_deluxe.jpg"
+  },
+  {
+    "ToyName": "Highway Patrol",
+    "Subcategory": "Police Cars",
+    "Price": "$16.99",
+    "AvailableQuantity": 10,
+    "Image": "https://example.com/images/highway_patrol.jpg"
+  },
+  {
+    "ToyName": "Rescue Helicopter",
+    "Subcategory": "Fire Trucks",
+    "Price": "$19.99",
+    "AvailableQuantity": 5,
+    "Image": "https://example.com/images/rescue_helicopter.jpg"
+  },
+  {
+    "ToyName": "Adventure Ambulance",
+    "Subcategory": "Ambulances",
+    "Price": "$23.99",
+    "AvailableQuantity": 7,
+    "Image": "https://example.com/images/adventure_ambulance.jpg"
+  },
+  {
+    "ToyName": "Mud Runner",
+    "Subcategory": "Off-Road Vehicles",
+    "Price": "$29.99",
+    "AvailableQuantity": 4,
+    "Image": "https://example.com/images/mud_runner.jpg"
+  },
+  {
+    "ToyName": "Super Sports Car",
+    "Subcategory": "Sports Cars",
+    "Price": "$39.99",
+    "AvailableQuantity": 2,
+    "Image": "https://example.com/images/super_sports_car.jpg"
+  },
+  {
+    "ToyName": "Vintage Roadster",
+    "Subcategory": "Classic Cars",
+    "Price": "$34.99",
+    "AvailableQuantity": 3,
+    "Image": "https://example.com/images/vintage_roadster.jpg"
+  },
+  {
+    "ToyName": "Monster Mayhem",
+    "Subcategory": "Monster Trucks",
+    "Price": "$44.99",
+    "AvailableQuantity": 1,
+    "Image": "https://example.com/images/monster_mayhem.jpg"
+  },
+  {
+    "ToyName": "Police Patrol Cruiser",
+    "Subcategory": "Police Cars",
+    "Price": "$18.99",
+    "AvailableQuantity": 5,
+    "Image": "https://example.com/images/police_patrol_cruiser.jpg"
+  }
+]

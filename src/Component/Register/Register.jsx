@@ -13,6 +13,7 @@ const Register = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+    const PhotoURL = form.photoURL.value;
     console.log(name, email, password);
     createUser(email, password)
       .then((loggedUser) => {
@@ -83,11 +84,17 @@ const Register = () => {
                 placeholder="password"
                 className="input input-bordered"
               />
+            </div>
+            <div className="form-control">
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
+                <span className="label-text">PhotoURL</span>
               </label>
+              <input
+                type="file"
+                name="PhotoURL"
+                placeholder="password"
+                className="input input-bordered"
+              />
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
