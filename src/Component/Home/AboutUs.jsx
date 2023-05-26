@@ -20,7 +20,7 @@ const AboutUs = () => {
                 Not only do the toys make our children squeal with joy, but the
                 sales team is awesome!
               </p>
-              <button className="rounded-full btn-primary py-2 px-4">
+              <button className="rounded-full btn bg-sky-400 btn-warning py-2 px-4">
                 About Us
               </button>
             </div>

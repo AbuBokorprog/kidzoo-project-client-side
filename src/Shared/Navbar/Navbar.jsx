@@ -118,6 +118,7 @@ const Navbar = () => {
           <h1 className="text-5xl">
             <span className="text-orange-500 font-bold">KidZ</span>oo
           </h1>
+          <p className="text-center text-blue-400">(Kids Toys)</p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

@@ -63,46 +63,28 @@ const GallerySection = () => {
             alt=""
           />
         </div>
+        <div className="carousel-item">
+          <img
+            className="w-96"
+            src="https://cdn.pixabay.com/photo/2021/02/06/07/01/pedal-car-5987090_1280.jpg"
+            alt=""
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            className="w-96"
+            src="https://cdn.pixabay.com/photo/2020/07/19/09/03/mazda-5419417_1280.jpg"
+            alt=""
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            className="w-96"
+            src="https://cdn.pixabay.com/photo/2019/12/28/22/22/figure-4725909_1280.jpg"
+            alt=""
+          />
+        </div>
       </div>
-
-      {/* <div className="grid grid-cols-3 gap-5">
-        <img
-          src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_1280.jpg"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2017/03/05/15/29/aston-martin-2118857_1280.jpg"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2016/12/03/18/57/car-1880381_1280.jpg"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2019/07/24/23/09/car-4361321_1280.jpg"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2015/05/08/23/45/austro-759074_1280.jpg"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2015/06/03/13/38/plymouth-796441_1280.jpg"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2020/10/08/16/08/auto-5638401_1280.png"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2019/02/18/10/16/car-4004150_1280.png"
-          alt=""
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2018/01/01/01/57/car-3053493_1280.png"
-          alt=""
-        />
-      </div> */}
     </div>
   );
 };
