@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 const ShortDescriptionSection = () => {
+  const { user } = useContext(authContext);
+
+  const buyBtn = () => {
+    if (!user?.email) {
+      return alert("please login first");
+    } else {
+      console.log("btn clicked");
+    }
+  };
+
   return (
     <div className="my-20">
       <div className="flex gap-5 justify-center items-center">
@@ -46,7 +57,9 @@ const ShortDescriptionSection = () => {
             </span>
           </p>
           <div className="my-4">
-            <button className="btn-success btn bg-red-500">Buy Now</button>
+            <button onClick={buyBtn} className="btn-success btn bg-red-500">
+              Buy Now
+            </button>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import GallerySection from "./GallerySection";
 import HomeBanner from "./HomeBanner/HomeBanner";
 import ShortDescriptionSection from "../ShortDescriptionSection/ShortDescriptionSection";
 import NewsLetter from "../NewsLetter/NewsLetter";
+import AboutUs from "./AboutUs";
 
 const Home = () => {
   return (
@@ -19,6 +20,9 @@ const Home = () => {
       </div>
       <div>
         <GallerySection></GallerySection>
+      </div>
+      <div>
+        <AboutUs></AboutUs>
       </div>
       <div>
         <NewsLetter></NewsLetter>
