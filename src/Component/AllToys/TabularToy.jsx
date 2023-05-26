@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TabularToy = ({ allToys }) => {
-  console.log(allToys);
-  const { ToyName, Subcategory, Price, AvailableQuantity, Image } = allToys;
+  //console.log(allToys);
+  const { ToyName, _id, Subcategory, Price, AvailableQuantity, Image } =
+    allToys;
   return (
     <tr>
       <td>
@@ -45,7 +47,9 @@ const TabularToy = ({ allToys }) => {
       <td>{Subcategory}</td>
       <td>{AvailableQuantity}</td>
       <th>
-        <button className="btn btn-success">View Details</button>
+        <Link to={`/viewDetails/${_id}`} className="btn btn-success">
+          View Details
+        </Link>
         {/* {status === "confirm" ? (
           <button className="btn btn-success btn-xs">Accepted</button>
         ) : (
