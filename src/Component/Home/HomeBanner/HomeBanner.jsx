@@ -1,5 +1,4 @@
 import React from "react";
-import banner from "../../../assets/wepik-export-20230525135306Q5wi (1).jpeg";
 import { Link } from "react-router-dom";
 
 const HomeBanner = () => {

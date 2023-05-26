@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
 import { authContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const ShortDescriptionSection = () => {
   const { user } = useContext(authContext);
 
   const buyBtn = () => {
     if (!user?.email) {
-      return alert("please login first");
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please Login!",
+      });
     } else {
       console.log("btn clicked");
     }

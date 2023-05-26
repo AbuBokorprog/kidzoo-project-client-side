@@ -13,8 +13,6 @@ const Navbar = () => {
     userProfile = user.photoURL;
     userName = user.displayName;
   }
-  console.log(userProfile);
-  console.log(user);
 
   const logOutHandler = () => {
     logOutUser()
