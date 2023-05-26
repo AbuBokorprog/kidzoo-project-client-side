@@ -9,8 +9,8 @@ const AboutUs = () => {
           src="https://cdn.pixabay.com/photo/2016/11/14/05/29/children-1822704_1280.jpg"
           alt=""
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
-        <div class="absolute top-20 left-5 right-5">
+        <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
+        <div className="absolute top-20 left-5 right-5">
           <div className="grid grid-cols-3 text-white gap-4">
             <div>
               <h2 className="text-4xl font-semibold mb-2 text-white">
@@ -24,7 +24,7 @@ const AboutUs = () => {
                 About Us
               </button>
             </div>
-            <div>
+            <div className="transition ease-in-out delay-150 rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-800 duration-300">
               <div className="card glass">
                 <div className="card-body">
                   <p className="text-title font-semibold text-xl">
@@ -49,7 +49,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-teal-800 rounded-2xl duration-300">
               <div className="card glass">
                 <div className="card-body">
                   <p className="text-title font-semibold text-xl">

@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -46,7 +47,30 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const Info = { user, createUser, loginUser, googleLogin, loader, logOutUser };
+  const updateProfileData = async (displayName, photoURL) => {
+    setLoader(true);
+    try {
+      await updateProfile(auth.currentUser, {
+        displayName: displayName,
+        photoURL: photoURL,
+      });
+      setUser(auth.currentUser);
+    } catch (error) {
+      console.log("Error updating profile:", error);
+    } finally {
+      setLoader(false);
+    }
+  };
+
+  const Info = {
+    user,
+    createUser,
+    loginUser,
+    googleLogin,
+    loader,
+    logOutUser,
+    updateProfileData,
+  };
 
   return <authContext.Provider value={Info}>{children}</authContext.Provider>;
 };

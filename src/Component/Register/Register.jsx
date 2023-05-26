@@ -3,24 +3,27 @@ import { Link } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
-  const { user, createUser, loader } = useContext(authContext);
-  const [success, setSuccess] = useState([]);
-  const [error, setError] = useState([]);
+  const { user, createUser, loader, updateProfileData } =
+    useContext(authContext);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
   const registerHandler = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
+    const displayName = form.displayName.value;
     const email = form.email.value;
     const password = form.password.value;
-    const PhotoURL = form.photoURL.value;
-    console.log(name, email, password);
+    const photoURL = form.elements.PhotoURL.value;
+    console.log(displayName, email, password, photoURL);
     createUser(email, password)
       .then((loggedUser) => {
         const user = loggedUser.user;
         console.log(user);
         setSuccess("Registered successfully");
         setError("");
+        // Update user's profile with displayName and photoURL
+        updateProfileData(displayName, photoURL);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -29,10 +32,13 @@ const Register = () => {
         setSuccess("");
       });
   };
+
   if (loader) {
-    <div className="radial-progress" style={{ "--value": 70 }}>
-      70%
-    </div>;
+    return (
+      <div className="radial-progress" style={{ "--value": 70 }}>
+        70%
+      </div>
+    );
   }
 
   return (
@@ -58,7 +64,7 @@ const Register = () => {
               </label>
               <input
                 type="text"
-                name="name"
+                name="displayName"
                 placeholder="Your Name"
                 className="input input-bordered"
               />
@@ -90,9 +96,9 @@ const Register = () => {
                 <span className="label-text">PhotoURL</span>
               </label>
               <input
-                type="file"
+                type="text"
                 name="PhotoURL"
-                placeholder="password"
+                placeholder="paste Your Photo URL"
                 className="input input-bordered"
               />
             </div>

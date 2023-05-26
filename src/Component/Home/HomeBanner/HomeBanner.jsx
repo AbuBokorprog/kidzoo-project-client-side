@@ -16,7 +16,7 @@ const HomeBanner = () => {
           src="https://img.freepik.com/free-photo/child-with-red-car_1149-686.jpg?size=626&ext=jpg&ga=GA1.1.825737080.1674060681&semt=ais"
           alt=""
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
       </div>
       <div className="text-center absolute right-72 top-64 text-white">
         <h2 className="text-5xl font-bold mb-4">
