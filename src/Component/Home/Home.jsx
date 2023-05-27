@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import SubCategory from "./SubCategory";
 import GallerySection from "./GallerySection";
 import HomeBanner from "./HomeBanner/HomeBanner";
@@ -6,8 +6,17 @@ import HomeBanner from "./HomeBanner/HomeBanner";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import AboutUs from "./AboutUs";
 import ShortDescriptionSection from "./ShortDescriptionSection/ShortDescriptionSection";
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 const Home = () => {
+  const { user, loader } = useContext(authContext);
+
+  if (loader) {
+    <div className="radial-progress" style={{ "--value": 70 }}>
+      70%
+    </div>;
+  }
+
   return (
     <div>
       <div>

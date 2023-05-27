@@ -15,6 +15,13 @@ const MyToys = () => {
       });
   }, [toysURL]);
   //console.log(myToys);
+
+  if (loader) {
+    <div className="radial-progress" style={{ "--value": 70 }}>
+      70%
+    </div>;
+  }
+
   return (
     <div>
       <div className="my-10">

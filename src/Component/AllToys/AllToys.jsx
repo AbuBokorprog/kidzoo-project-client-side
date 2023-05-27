@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import TabularToy from "./TabularToy";
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 const AllToys = () => {
+  const { user, loader } = useContext(authContext);
+
   const allToys = useLoaderData();
-  //console.log(allToys);
+  console.log(allToys);
   // const {} = allToys;
+
+  if (loader) {
+    <div className="radial-progress" style={{ "--value": 70 }}>
+      70%
+    </div>;
+  }
+
   return (
     <div>
       <div className="justify-center items-center flex gap-4">
@@ -50,7 +60,7 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-              {allToys.map((a) => (
+              {allToys.slice(0, 21).map((a) => (
                 <TabularToy allToys={a} key={a._id}></TabularToy>
               ))}
             </tbody>

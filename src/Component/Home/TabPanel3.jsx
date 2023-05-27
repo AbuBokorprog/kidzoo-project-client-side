@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
-const TabularToy = ({ allToys }) => {
-  //console.log(allToys);
+const TabPanel3 = ({ toy }) => {
+  const { user } = useContext(authContext);
   const {
     _id,
     name,
@@ -14,8 +16,18 @@ const TabularToy = ({ allToys }) => {
     Description,
     Rating,
     AvailableQuantity,
-  } = allToys;
-  console.log(allToys);
+  } = toy;
+
+  const viewDetailsBtn = () => {
+    if (!user?.email) {
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please Login!",
+      });
+    }
+  };
+
   return (
     <tr>
       <td>
@@ -44,7 +56,7 @@ const TabularToy = ({ allToys }) => {
       <td>{Description}</td>
       <td>{Rating}</td>
       <th>
-        <Link to={`/viewDetails/${_id}`} className="btn btn-success">
+        <Link onClick={viewDetailsBtn} className="btn btn-success">
           View Details
         </Link>
       </th>
@@ -52,4 +64,4 @@ const TabularToy = ({ allToys }) => {
   );
 };
 
-export default TabularToy;
+export default TabPanel3;

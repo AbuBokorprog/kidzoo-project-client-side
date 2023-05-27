@@ -17,7 +17,7 @@ const ViewDetails = () => {
   return (
     <div className="flex gap-5 my-10 justify-center items-center">
       <div className="w-1/2">
-        <img className="rounded-2xl" src={Image} alt="" />
+        <img className="" src={Image} alt="Image" />
       </div>
       <div className="w-1/2 bg-sky-300 pl-10 py-10 rounded-xl">
         <h3 className="text-3xl font-bold my-3">Toy Name: {ToyName}</h3>

@@ -3,7 +3,7 @@ import { authContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const AddToys = () => {
-  const { user } = useContext(authContext);
+  const { user, loader } = useContext(authContext);
   const addToysHandler = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -46,6 +46,12 @@ const AddToys = () => {
         }
       });
   };
+
+  if (loader) {
+    <div className="radial-progress" style={{ "--value": 70 }}>
+      70%
+    </div>;
+  }
 
   return (
     <div className="my-20">

@@ -6,7 +6,7 @@ const UpdateToy = () => {
   const oldDetails = useLoaderData();
   console.log(oldDetails);
   const { price, AvailableQuantity, Description, _id } = oldDetails;
-  const updateToyDetails = (e, id) => {
+  const updateToyDetails = (e) => {
     e.preventDefault();
     const form = e.target;
     const price = form.Price.value;
