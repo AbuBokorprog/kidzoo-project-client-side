@@ -14,7 +14,7 @@ const MyToys = () => {
         setMyToys(data);
       });
   }, [toysURL]);
-  console.log(myToys);
+  //console.log(myToys);
   return (
     <div>
       <div className="my-10">

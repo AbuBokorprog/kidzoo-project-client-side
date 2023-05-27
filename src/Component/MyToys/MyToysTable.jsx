@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyToysTable = ({ myToys }) => {
   const {
+    _id,
     name,
     email,
     category,
@@ -13,6 +15,33 @@ const MyToysTable = ({ myToys }) => {
     Rating,
     AvailableQuantity,
   } = myToys;
+
+  const deleteBtn = (id) => {
+    //console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:3000/toy/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deleteCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            }
+          });
+      }
+    });
+  };
+
   return (
     <tr>
       <td>
@@ -46,7 +75,10 @@ const MyToysTable = ({ myToys }) => {
         </Link>
       </th>
       <td>
-        <button className="btn-error btn-sm rounded-xl">
+        <button
+          onClick={() => deleteBtn(_id)}
+          className="btn-error btn-sm rounded-xl"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
