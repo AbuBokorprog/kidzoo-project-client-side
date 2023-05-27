@@ -70,7 +70,7 @@ const MyToysTable = ({ myToys }) => {
       <td>{Description}</td>
       <td>{Rating}</td>
       <th>
-        <Link to="/update" className="btn btn-success">
+        <Link to={`/update/${_id}`} className="btn btn-success">
           Update
         </Link>
       </th>
