@@ -78,7 +78,7 @@ const Navbar = () => {
             )}
             <li>
               <Link to="/blog" className="text-xl font-medium">
-                blog
+                Blogs
               </Link>
             </li>
             {user?.email ? (
@@ -114,6 +114,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <img className="w-20 md:hidden" src={svg} alt="" />
         <Link to="/" className="normal-case text-xl">
           <h1 className="text-5xl">
             <span className="text-orange-400 font-bold">KidZ</span>
@@ -149,7 +150,7 @@ const Navbar = () => {
           )}
           <li>
             <Link to="/blog" className="text-xl text-white font-medium">
-              blog
+              Blogs
             </Link>
           </li>
           {user?.email ? (

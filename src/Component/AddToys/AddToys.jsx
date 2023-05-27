@@ -29,7 +29,7 @@ const AddToys = () => {
     };
     //console.log(detailsToy);
 
-    fetch("http://localhost:3000/toy", {
+    fetch("https://kidzoo-server-side.vercel.app/toy", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(detailsToy),
@@ -65,112 +65,130 @@ const AddToys = () => {
               <div className=" lg:flex gap-5">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Toy Name</span>
+                    <span className="label-text font-semibold text-xl">
+                      Toy Name
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="ToyName"
                     defaultValue={""}
                     placeholder="Toy Name"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Sub-Category</span>
+                    <span className="label-text font-semibold text-xl">
+                      Sub-Category
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="Subcategory"
                     placeholder="Sub-Category"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
               </div>
               <div className=" lg:flex gap-5">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Seller Name</span>
+                    <span className="label-text font-semibold text-xl">
+                      Seller Name
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="SellerName"
                     defaultValue={user?.displayName}
                     placeholder="Seller Name"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Seller Email</span>
+                    <span className="label-text font-semibold text-xl">
+                      Seller Email
+                    </span>
                   </label>
                   <input
                     type="email"
                     name="SellerEmail"
                     defaultValue={user?.email}
                     placeholder="email"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
               </div>
               <div className=" lg:flex gap-5">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Picture URL</span>
+                    <span className="label-text font-semibold text-xl">
+                      Picture URL
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="Image"
                     defaultValue={""}
                     placeholder="Picture URL"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Price</span>
+                    <span className="label-text font-semibold text-xl">
+                      Price
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="Price"
                     placeholder="Price"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
               </div>
               <div className="lg:flex gap-5">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Rating</span>
+                    <span className="label-text font-semibold text-xl">
+                      Rating
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="Rating"
                     defaultValue={""}
                     placeholder="Rating"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Available quantity</span>
+                    <span className="label-text font-semibold text-xl">
+                      Available quantity
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="AvailableQuantity"
                     defaultValue={""}
                     placeholder="Available quantity"
-                    className="input input-bordered"
+                    className="input w-96 textarea-warning input-bordered"
                   />
                 </div>
               </div>
               <textarea
-                className="textarea textarea-accent"
+                className="textarea textarea-warning"
                 placeholder="Description"
                 name="Description"
               ></textarea>
               <div className="form-control mt-6">
-                <button className="btn bg-teal-400 btn-block">Add Toy</button>
+                <button className="btn hover:bg-teal-400 btn-warning">
+                  Add Toy
+                </button>
               </div>
             </form>
           </div>

@@ -11,12 +11,12 @@ import {
 import app from "../Firebase/Firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 
-export const authContext = createContext();
+export const authContext = createContext(null);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   const [loader, setLoader] = useState(false);
 
   const createUser = (email, password) => {
@@ -25,10 +25,12 @@ const AuthProvider = ({ children }) => {
   };
 
   const loginUser = (email, password) => {
+    setLoader(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const googleLogin = () => {
+    setLoader(true);
     return signInWithPopup(auth, provider);
   };
 
@@ -43,12 +45,10 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const logOutUser = () => {
-    setLoader(true);
     return signOut(auth);
   };
 
   const updateProfileData = async (displayName, photoURL) => {
-    setLoader(true);
     try {
       await updateProfile(auth.currentUser, {
         displayName: displayName,
@@ -58,7 +58,6 @@ const AuthProvider = ({ children }) => {
     } catch (error) {
       console.log("Error updating profile:", error);
     } finally {
-      setLoader(false);
     }
   };
 

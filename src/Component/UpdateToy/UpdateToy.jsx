@@ -14,7 +14,7 @@ const UpdateToy = () => {
     const Description = form.Description.value;
     const updated = { price, Description, AvailableQuantity };
     console.log(updated);
-    fetch(`http://localhost:3000/toy/${_id}`, {
+    fetch(`https://kidzoo-server-side.vercel.app/toy/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updated),

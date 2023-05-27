@@ -5,7 +5,7 @@ import MyToysTable from "./MyToysTable";
 const MyToys = () => {
   const { user, loader } = useContext(authContext);
   const [myToys, setMyToys] = useState([]);
-  const toysURL = `http://localhost:3000/toy?email=${user?.email}`;
+  const toysURL = `https://kidzoo-server-side.vercel.app/toy?email=${user?.email}`;
   useEffect(() => {
     fetch(toysURL)
       .then((res) => res.json())

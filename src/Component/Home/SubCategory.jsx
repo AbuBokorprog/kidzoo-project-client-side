@@ -6,10 +6,9 @@ import TabPanel3 from "./TabPanel3";
 
 const SubCategory = () => {
   const [toys, setToys] = useState([]);
-  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/toy")
+    fetch("https://kidzoo-server-side.vercel.app/toy")
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
@@ -41,12 +40,7 @@ const SubCategory = () => {
                   <tr>
                     <th>Image</th>
                     <th>Toy-Name</th>
-                    <th>Seller-Name</th>
-                    <th>Seller-Email</th>
                     <th>Price</th>
-                    <th>Sub-Category</th>
-                    <th>Available-Quantity</th>
-                    <th>Description</th>
                     <th>Rating</th>
                     <th>View Details</th>
                   </tr>
@@ -66,12 +60,7 @@ const SubCategory = () => {
                   <tr>
                     <th>Image</th>
                     <th>Toy-Name</th>
-                    <th>Seller-Name</th>
-                    <th>Seller-Email</th>
                     <th>Price</th>
-                    <th>Sub-Category</th>
-                    <th>Available-Quantity</th>
-                    <th>Description</th>
                     <th>Rating</th>
                     <th>View Details</th>
                   </tr>
@@ -91,12 +80,7 @@ const SubCategory = () => {
                   <tr>
                     <th>Image</th>
                     <th>Toy-Name</th>
-                    <th>Seller-Name</th>
-                    <th>Seller-Email</th>
                     <th>Price</th>
-                    <th>Sub-Category</th>
-                    <th>Available-Quantity</th>
-                    <th>Description</th>
                     <th>Rating</th>
                     <th>View Details</th>
                   </tr>

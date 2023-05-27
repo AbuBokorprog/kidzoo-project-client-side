@@ -15,7 +15,7 @@ const TabularToy = ({ allToys }) => {
     Rating,
     AvailableQuantity,
   } = allToys;
-  console.log(allToys);
+  //console.log(allToys);
   return (
     <tr>
       <td>
@@ -37,12 +37,9 @@ const TabularToy = ({ allToys }) => {
       </td>
       <td>{name}</td>
       <td>{sellerName}</td>
-      <td>{email}</td>
       <td>{price}</td>
       <td>{category}</td>
       <td>{AvailableQuantity}</td>
-      <td>{Description}</td>
-      <td>{Rating}</td>
       <th>
         <Link to={`/viewDetails/${_id}`} className="btn btn-success">
           View Details

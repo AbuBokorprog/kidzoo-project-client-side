@@ -18,7 +18,13 @@ const ShortDescriptionSection = () => {
   };
 
   return (
-    <div className="my-20">
+    <div
+      className="my-20"
+      data-aos="fade-zoom-in"
+      data-aos-offset="200"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="600"
+    >
       <div className="flex gap-5 justify-center items-center">
         <div className="w-1/2">
           <div className="grid grid-cols-2 gap-4">

@@ -10,6 +10,7 @@ import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import Blog from "../Component/Blog/Blog";
 import ViewDetails from "../Component/ViewDetails/ViewDetails";
 import UpdateToy from "../Component/UpdateToy/UpdateToy";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -24,26 +25,39 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:3000/toy"),
+        loader: () => fetch("https://kidzoo-server-side.vercel.app/toy"),
       },
       {
         path: "/viewDetails/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/storesToy/${params.id}`),
+          fetch(`https://kidzoo-server-side.vercel.app/toy/${params.id}`),
       },
       {
         path: "/myToys",
-        element: <MyToys></MyToys>,
+        element: (
+          <PrivateRoute>
+            <MyToys></MyToys>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/update/:id",
         element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`http://localhost:3000/toy/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://kidzoo-server-side.vercel.app/toy/${params.id}`),
       },
       {
         path: "/addToys",
-        element: <AddToys></AddToys>,
+        element: (
+          <PrivateRoute>
+            <AddToys></AddToys>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blog",

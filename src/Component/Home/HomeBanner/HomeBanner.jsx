@@ -17,7 +17,7 @@ const HomeBanner = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
       </div>
-      <div className="text-center absolute right-72 top-64 text-white">
+      <div className="text-center absolute right-72 top-80 text-white">
         <h2 className="text-5xl font-bold mb-4">
           Welcome to <span className="">KidZoo</span>!
         </h2>

@@ -48,19 +48,10 @@ const TabPanel2 = ({ toy }) => {
         </div>
       </td>
       <td>{name}</td>
-      <td>{sellerName}</td>
-      <td>{email}</td>
       <td>{price}</td>
-      <td>{category}</td>
-      <td>{AvailableQuantity}</td>
-      <td>{Description}</td>
       <td>{Rating}</td>
       <th>
-        <Link
-          onClick={viewDetailsBtn}
-          // to={`/viewDetails/${_id}`}
-          className="btn btn-success"
-        >
+        <Link onClick={viewDetailsBtn} className="btn btn-success">
           View Details
         </Link>
       </th>

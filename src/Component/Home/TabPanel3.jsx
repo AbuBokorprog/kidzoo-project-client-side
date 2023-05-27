@@ -48,12 +48,7 @@ const TabPanel3 = ({ toy }) => {
         </div>
       </td>
       <td>{name}</td>
-      <td>{sellerName}</td>
-      <td>{email}</td>
       <td>{price}</td>
-      <td>{category}</td>
-      <td>{AvailableQuantity}</td>
-      <td>{Description}</td>
       <td>{Rating}</td>
       <th>
         <Link onClick={viewDetailsBtn} className="btn btn-success">

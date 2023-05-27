@@ -5,9 +5,20 @@ import { authContext } from "../../AuthProvider/AuthProvider";
 const ViewDetails = () => {
   const { user, loader } = useContext(authContext);
   const singleToy = useLoaderData();
-  const { ToyName, _id, Subcategory, Price, AvailableQuantity, Image } =
-    singleToy;
+  const {
+    _id,
+    name,
+    email,
+    category,
+    sellerName,
+    Image,
+    price,
+    Description,
+    Rating,
+    AvailableQuantity,
+  } = singleToy;
   console.log(singleToy);
+
   if (loader) {
     <div className="radial-progress" style={{ "--value": 70 }}>
       70%
@@ -15,25 +26,19 @@ const ViewDetails = () => {
   }
 
   return (
-    <div className="flex gap-5 my-10 justify-center items-center">
-      <div className="w-1/2">
-        <img className="" src={Image} alt="Image" />
-      </div>
-      <div className="w-1/2 bg-sky-300 pl-10 py-10 rounded-xl">
-        <h3 className="text-3xl font-bold my-3">Toy Name: {ToyName}</h3>
-        <h4 className="text-2xl font-semibold my-3">
-          Seller: {user?.displayName}
-        </h4>
-        <h5 className="text-xl font-semibold">Seller Email: {user?.email}</h5>
-        <p className=" text-xl font-semibold my-3">
-          Sub-Category: {Subcategory}
-        </p>
-        <p className="text-xl text-red-700 font-semibold my-3">
-          Price: {Price}
-        </p>
-        <p className="text-xl font-semibold my-3">
-          Available Quantity: {AvailableQuantity}
-        </p>
+    <div className="card my-20 lg:card-side bg-base-100 shadow-xl">
+      <figure>
+        <img className="" src={Image} alt="Album" />
+      </figure>
+      <div className="card-body w-1/2">
+        <h2 className="card-title">Toy Name: {name}</h2>
+        <p>Seller Name: {sellerName}</p>
+        <p>Seller Email: {email}</p>
+        <p>Sub-Category: {category}</p>
+        <p>Price: {price}</p>
+        <p>Rating: {Rating}</p>
+        <p>Available Quantity: {AvailableQuantity}</p>
+        <p>Description: {Description}</p>
       </div>
     </div>
   );

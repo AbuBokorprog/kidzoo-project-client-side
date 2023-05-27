@@ -50,12 +50,9 @@ const AllToys = () => {
                 <th>Image</th>
                 <th>Toy-Name</th>
                 <th>Seller-Name</th>
-                <th>Seller-Email</th>
                 <th>Price</th>
                 <th>Sub-Category</th>
                 <th>Available-Quantity</th>
-                <th>Description</th>
-                <th>Rating</th>
                 <th>View Details</th>
               </tr>
             </thead>
