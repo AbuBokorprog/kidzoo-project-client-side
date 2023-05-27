@@ -7,7 +7,7 @@ const ViewDetails = () => {
   const singleToy = useLoaderData();
   const { ToyName, _id, Subcategory, Price, AvailableQuantity, Image } =
     singleToy;
-
+  console.log(singleToy);
   if (loader) {
     <div className="radial-progress" style={{ "--value": 70 }}>
       70%

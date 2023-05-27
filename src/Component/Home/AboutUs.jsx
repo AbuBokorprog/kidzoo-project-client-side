@@ -24,7 +24,7 @@ const AboutUs = () => {
                 About Us
               </button>
             </div>
-            <div className="transition ease-in-out delay-150 rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-800 duration-300">
+            <div className="transition ease-in-out delay-150 rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-orange-400 duration-300">
               <div className="card glass">
                 <div className="card-body">
                   <p className="text-title font-semibold text-xl">
@@ -49,7 +49,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-teal-800 rounded-2xl duration-300">
+            <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-teal-500 rounded-2xl duration-300">
               <div className="card glass">
                 <div className="card-body">
                   <p className="text-title font-semibold text-xl">

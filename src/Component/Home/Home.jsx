@@ -2,9 +2,10 @@ import React from "react";
 import SubCategory from "./SubCategory";
 import GallerySection from "./GallerySection";
 import HomeBanner from "./HomeBanner/HomeBanner";
-import ShortDescriptionSection from "../ShortDescriptionSection/ShortDescriptionSection";
+
 import NewsLetter from "../NewsLetter/NewsLetter";
 import AboutUs from "./AboutUs";
+import ShortDescriptionSection from "./ShortDescriptionSection/ShortDescriptionSection";
 
 const Home = () => {
   return (

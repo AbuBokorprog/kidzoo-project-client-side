@@ -22,7 +22,11 @@ const NewsLetter = () => {
             className="form-control rounded-xl w-100 px-10 border-4 border-black py-2"
             placeholder="Your Email"
           />
-          <input className="form-control btn" type="submit" value="submit" />
+          <input
+            className="form-control btn bg-orange-400 hover:bg-teal-300 text-black"
+            type="submit"
+            value="submit"
+          />
         </form>
       </div>
     </div>

@@ -29,7 +29,7 @@ const HomeBanner = () => {
           actual or via our website!
         </p>
         <div className="mx-auto my-4">
-          <button className="btn btn-error">
+          <button className="btn bg-orange-400 text-black hover:bg-teal-400">
             <Link className="">Discover More</Link>
           </button>
         </div>

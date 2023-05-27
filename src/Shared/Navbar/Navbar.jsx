@@ -29,7 +29,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar top-0 py-5 rounded-xl">
+    <div className="navbar top-0 py-5 bg-black rounded-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -116,50 +116,54 @@ const Navbar = () => {
         </div>
         <Link to="/" className="normal-case text-xl">
           <h1 className="text-5xl">
-            <span className="text-orange-500 font-bold">KidZ</span>oo
+            <span className="text-orange-400 font-bold">KidZ</span>
+            <span className="text-teal-400">oo</span>
           </h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/" className="text-xl font-medium">
+            <Link to="/" className="text-xl text-white font-medium">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/allToys" className="text-xl font-medium">
+            <Link to="/allToys" className="text-xl text-white font-medium">
               All Toys
             </Link>
           </li>
           {user?.email && (
             <li>
-              <Link to="/myToys" className="text-xl font-medium">
+              <Link to="/myToys" className="text-xl text-white  font-medium">
                 My toys
               </Link>
             </li>
           )}
           {user?.email && (
             <li>
-              <Link to="/AddToys" className="text-xl font-medium">
+              <Link to="/AddToys" className="text-xl text-white font-medium">
                 Add a Toys
               </Link>
             </li>
           )}
           <li>
-            <Link to="/blog" className="text-xl font-medium">
+            <Link to="/blog" className="text-xl text-white font-medium">
               blog
             </Link>
           </li>
           {user?.email ? (
             <li>
-              <button onClick={logOutHandler} className="text-xl font-medium">
+              <button
+                onClick={logOutHandler}
+                className="text-xl text-white font-medium"
+              >
                 LogOut
               </button>
             </li>
           ) : (
             <li>
-              <Link to="/login" className="text-xl font-medium">
+              <Link to="/login" className="text-xl text-white font-medium">
                 Login
               </Link>
             </li>

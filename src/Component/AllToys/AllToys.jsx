@@ -30,18 +30,23 @@ const AllToys = () => {
         />
       </div>
       <div>
+        <h2 className="text-5xl font-bold text-center my-5">All Toys</h2>
+      </div>
+      <div>
         <div className="overflow-x-auto w-full">
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Remove</th>
                 <th>Image</th>
-                <th>Name</th>
+                <th>Toy-Name</th>
+                <th>Seller-Name</th>
+                <th>Seller-Email</th>
                 <th>Price</th>
                 <th>Sub-Category</th>
                 <th>Available-Quantity</th>
-                <th>Status</th>
-                <th>Seller</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th>View Details</th>
               </tr>
             </thead>
             <tbody>

@@ -3,12 +3,13 @@ import svg from "../../assets/Red_blue_illustration_Kids_Toys_logo-removebg-prev
 
 const Footer = () => {
   return (
-    <footer className=" p-10 bg-base-200 rounded-xl ">
-      <div className="footer text-base-content">
+    <footer className=" p-10 bg-black text-white rounded-xl ">
+      <div className="footer text-white">
         <div>
           <img src={svg} alt="" className="w-32" />
           <h1 className="text-5xl">
-            <span className="text-orange-500 font-bold">KidZ</span>oo
+            <span className="text-orange-400 font-bold">KidZ</span>
+            <span className="text-teal-400">oo</span>
           </h1>
         </div>
         <div>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { authContext } from "../../AuthProvider/AuthProvider";
+import { authContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const ShortDescriptionSection = () => {
@@ -48,7 +48,7 @@ const ShortDescriptionSection = () => {
           <h2 className="text-5xl font-bold mb-8">
             We provide & offer premium service.
           </h2>
-          <p className="my-4 text-gray-500">
+          <p className="my-4 text-black">
             Our area of practice is quite wide: toy production, custom-made toys
             for every age, toy brand promotion, playrooms design with equipment,
             and of course kids camps and events! Contact us today and get a free
@@ -56,13 +56,16 @@ const ShortDescriptionSection = () => {
             updates.
           </p>
           <p>
-            <span className="font-semibold text-xl text-red-600">
+            <span className="font-semibold text-xl bg-red-400">
               Free shipping on orders over $50. Sign up for our newsletter and
               get 10% off your first purchase.
             </span>
           </p>
           <div className="my-4">
-            <button onClick={buyBtn} className="btn-success btn bg-red-500">
+            <button
+              onClick={buyBtn}
+              className="bg-red-500 font-medium text-black btn hover:bg-teal-400"
+            >
               Buy Now
             </button>
           </div>
