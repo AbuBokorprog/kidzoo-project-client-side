@@ -1,14 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TabularToy from "./TabularToy";
 import { authContext } from "../../AuthProvider/AuthProvider";
 
 const AllToys = () => {
   const { user, loader } = useContext(authContext);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const allToys = useLoaderData();
-  console.log(allToys);
-  // const {} = allToys;
+  //console.log(allToys);
+
+  useEffect(() => {
+    if (allToys) {
+      const filteredToys = allToys.filter(
+        (toy) =>
+          toy["name"] &&
+          toy["name"].toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filteredToys);
+    }
+  }, [searchQuery, allToys]);
 
   if (loader) {
     <div className="radial-progress" style={{ "--value": 70 }}>
@@ -19,11 +31,14 @@ const AllToys = () => {
   return (
     <div>
       <div className="justify-center items-center flex gap-4">
+        {/* Search input */}
         <div>
           <input
             type="search"
             placeholder="Search here"
             className="input input-bordered input-primary w-full max-w-xs"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
         <div>
@@ -57,7 +72,7 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-              {allToys.slice(0, 21).map((a) => (
+              {searchResults.map((a) => (
                 <TabularToy allToys={a} key={a._id}></TabularToy>
               ))}
             </tbody>
