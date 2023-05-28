@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
+import useRoute from "../../RouteHook/UseRoute";
 
 const Register = () => {
   const { user, createUser, loader, updateProfileData } =
     useContext(authContext);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+
+  useRoute("Register");
 
   const registerHandler = (e) => {
     e.preventDefault();

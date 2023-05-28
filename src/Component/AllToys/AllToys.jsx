@@ -2,11 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TabularToy from "./TabularToy";
 import { authContext } from "../../AuthProvider/AuthProvider";
+import useRoute from "../../RouteHook/UseRoute";
 
 const AllToys = () => {
   const { user, loader } = useContext(authContext);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
+  useRoute("AllToys");
 
   const allToys = useLoaderData();
   //console.log(allToys);

@@ -30,7 +30,9 @@ const HomeBanner = () => {
         </p>
         <div className="mx-auto md:my-4">
           <button className="btn bg-orange-400 text-black hover:bg-teal-400">
-            <Link className="">Discover More</Link>
+            <Link to="/allToys" className="">
+              Discover More
+            </Link>
           </button>
         </div>
       </div>

@@ -7,10 +7,11 @@ import NewsLetter from "../NewsLetter/NewsLetter";
 import AboutUs from "./AboutUs";
 import ShortDescriptionSection from "./ShortDescriptionSection/ShortDescriptionSection";
 import { authContext } from "../../AuthProvider/AuthProvider";
+import useRoute from "../../RouteHook/UseRoute";
 
 const Home = () => {
   const { user, loader } = useContext(authContext);
-
+  useRoute("Home");
   if (loader) {
     <div className="radial-progress" style={{ "--value": 70 }}>
       70%

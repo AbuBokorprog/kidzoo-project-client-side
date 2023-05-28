@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { authContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useRoute from "../../RouteHook/UseRoute";
 
 const AddToys = () => {
   const { user, loader } = useContext(authContext);
+  useRoute("Add A Toy");
   const addToysHandler = (e) => {
     e.preventDefault();
     const form = e.target;

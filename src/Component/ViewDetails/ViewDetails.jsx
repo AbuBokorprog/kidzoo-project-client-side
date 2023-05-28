@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
+import useRoute from "../../RouteHook/UseRoute";
 
 const ViewDetails = () => {
   const { user, loader } = useContext(authContext);
   const singleToy = useLoaderData();
+  useRoute("ViewDetails");
   const {
     _id,
     name,

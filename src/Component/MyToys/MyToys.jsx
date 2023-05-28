@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { authContext } from "../../AuthProvider/AuthProvider";
 import MyToysTable from "./MyToysTable";
+import useRoute from "../../RouteHook/UseRoute";
 
 const MyToys = () => {
   const { user, loader } = useContext(authContext);
   const [myToys, setMyToys] = useState([]);
+
+  useRoute("MyToys");
   const toysURL = `https://kidzoo-server-side.vercel.app/toy?email=${user?.email}`;
   useEffect(() => {
     fetch(toysURL)
@@ -21,7 +24,6 @@ const MyToys = () => {
       70%
     </div>;
   }
-
   return (
     <div>
       <div className="my-10">

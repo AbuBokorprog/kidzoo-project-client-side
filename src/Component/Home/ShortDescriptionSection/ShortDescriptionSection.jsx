@@ -27,7 +27,7 @@ const ShortDescriptionSection = () => {
     >
       <div className="md:flex gap-5 justify-center items-center">
         <div className="md:w-1/2">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 bg-black gap-4">
             <img
               className="rounded-2xl"
               src="https://img.freepik.com/free-photo/fun-trex-3d-illustration_183364-81258.jpg?size=626&ext=jpg&ga=GA1.2.825737080.1674060681&semt=ais"

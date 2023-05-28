@@ -8,9 +8,10 @@ const NewsLetter = () => {
         <img
           className="w-full rounded-3xl"
           src="https://cdn.pixabay.com/photo/2014/09/23/12/21/toys-457595_1280.jpg"
-          alt=""
+          alt="NewsLetter"
         />
       </div>
+
       <div className="mx-auto md:w-1/2 text-center">
         <p className="text-xl">NewsLetter SignUp </p>
         <h3 className="text-3xl my-3">Subscribe to the Update!!</h3>

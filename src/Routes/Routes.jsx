@@ -11,6 +11,7 @@ import Blog from "../Component/Blog/Blog";
 import ViewDetails from "../Component/ViewDetails/ViewDetails";
 import UpdateToy from "../Component/UpdateToy/UpdateToy";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import About from "./About/About";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "about",
+        element: <About></About>,
       },
     ],
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -21,7 +22,7 @@ const AboutUs = () => {
                 sales team is awesome!
               </p>
               <button className="rounded-full btn bg-sky-400 btn-warning py-2 px-4">
-                About Us
+                <Link to="/about">About Us</Link>
               </button>
             </div>
             <div className="transition ease-in-out delay-150 rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-orange-400 duration-300">

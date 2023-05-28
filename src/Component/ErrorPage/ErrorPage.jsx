@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useRoute from "../../RouteHook/UseRoute";
 
 const ErrorPage = () => {
+  useRoute("ErrorPage");
   return (
     <div className="text-center">
       <img

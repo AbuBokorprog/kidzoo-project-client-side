@@ -1,6 +1,8 @@
 import React from "react";
+import useRoute from "../../RouteHook/UseRoute";
 
 const Blog = () => {
+  useRoute("Blogs");
   return (
     <div className="my-20">
       <div className="my-6">

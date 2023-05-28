@@ -1,9 +1,13 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useRoute from "../../RouteHook/UseRoute";
 
 const UpdateToy = () => {
   const oldDetails = useLoaderData();
+
+  useRoute("Update-Toy");
+
   console.log(oldDetails);
   const { price, AvailableQuantity, Description, _id } = oldDetails;
   const updateToyDetails = (e) => {
