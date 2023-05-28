@@ -18,9 +18,9 @@ const SubCategory = () => {
   const filteredToys1 = toys.filter((toy) => toy.category === "sports car");
   //setFilter(filteredToys1);
   //console.log(filteredToys1);
-  const filteredToys2 = toys.filter((toy) => toy.category === "Race car");
+  const filteredToys2 = toys.filter((toy) => toy.category === "Bus");
   //console.log(filteredToys2);
-  const filteredToys3 = toys.filter((toy) => toy.category === "Police Cars");
+  const filteredToys3 = toys.filter((toy) => toy.category === "Police Car");
   //console.log(filteredToys3);
 
   return (
@@ -29,9 +29,9 @@ const SubCategory = () => {
       <div className="mx-auto my-4 text-center">
         <Tabs>
           <TabList className="flex text-xl font-semibold justify-around items-center">
-            <Tab>Race Cars</Tab>
+            <Tab>Bus</Tab>
             <Tab>Sports Cars</Tab>
-            <Tab>Police Cars</Tab>
+            <Tab>Police Car</Tab>
           </TabList>
           <TabPanel>
             <div className="overflow-x-auto w-full">
