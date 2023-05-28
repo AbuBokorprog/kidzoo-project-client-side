@@ -10,13 +10,13 @@ const AboutUs = () => {
           alt=""
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
-        <div className="absolute top-20 left-5 right-5">
-          <div className="grid grid-cols-3 text-white gap-4">
-            <div>
-              <h2 className="text-4xl font-semibold mb-2 text-white">
+        <div className="absolute top-16 left-5 right-5">
+          <div className="flex text-white gap-4">
+            <div className="">
+              <h2 className="md:text-4xl lg:text-xl md:font-semibold md:mb-2 text-white">
                 What Our Clients say about us
               </h2>
-              <p className="text-white text-xl mb-2">
+              <p className="text-white md:text-xl md:mb-2">
                 Not only do the toys make our children squeal with joy, but the
                 sales team is awesome!
               </p>
@@ -26,16 +26,16 @@ const AboutUs = () => {
             </div>
             <div className="transition ease-in-out delay-150 rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-orange-400 duration-300">
               <div className="card glass">
-                <div className="card-body">
-                  <p className="text-title font-semibold text-xl">
+                <div className="md:card-body h-full">
+                  <p className="md:text-title font-semibold md:text-xl">
                     What a great store for the entire family! My kids love this
                     place because of the toys!
                   </p>
-                  <div className="card-actions">
-                    <div className="flex gap-3 justify-center items-center">
+                  <div className="">
+                    <div className="md:flex md:gap-3 md:justify-center md:items-center">
                       <div>
                         <img
-                          className="w-16 rounded-full"
+                          className="w-10 rounded-full"
                           src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?size=626&ext=jpg&ga=GA1.2.825737080.1674060681&semt=ais"
                           alt=""
                         />
@@ -51,16 +51,16 @@ const AboutUs = () => {
             </div>
             <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-teal-500 rounded-2xl duration-300">
               <div className="card glass">
-                <div className="card-body">
-                  <p className="text-title font-semibold text-xl">
+                <div className="md:card-body">
+                  <p className="text-title font-semibold md:text-xl">
                     Not only do the toys make our children squeal with joy, but
                     the sales team is awesome!
                   </p>
                   <div className="card-actions">
-                    <div className="flex gap-3 justify-center items-center">
+                    <div className="md:flex md:gap-3 md:justify-center md:items-center">
                       <div>
                         <img
-                          className="w-16 rounded-full"
+                          className="w-10 rounded-full"
                           src="https://img.freepik.com/premium-vector/arab-omani-man-wear-masar-kamah-vector-icon_596695-7.jpg?size=626&ext=jpg"
                           alt=""
                         />

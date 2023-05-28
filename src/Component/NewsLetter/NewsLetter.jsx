@@ -3,7 +3,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="my-20 flex lg:flex-row-reverse gap-4 justify-center items-center">
+    <div className="my-20 md:flex gap-4 justify-center items-center">
       <div className="">
         <img
           className="w-full rounded-3xl"
@@ -11,7 +11,7 @@ const NewsLetter = () => {
           alt=""
         />
       </div>
-      <div className="mx-auto w-1/2 text-center">
+      <div className="mx-auto md:w-1/2 text-center">
         <p className="text-xl">NewsLetter SignUp </p>
         <h3 className="text-3xl my-3">Subscribe to the Update!!</h3>
         <form className="flex gap-1">

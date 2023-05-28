@@ -29,13 +29,13 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar top-0 py-5 bg-black rounded-xl">
+    <div className="navbar top-0 py-5 mx-auto bg-black rounded-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -50,7 +50,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52"
+            className="menu bg-slate-300 menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-44"
           >
             <li>
               <Link to="/" className="text-xl font-medium">
@@ -102,7 +102,7 @@ const Navbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-8 h-8"
+                  className="w-6 h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -114,9 +114,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <img className="w-20 md:hidden" src={svg} alt="" />
-        <Link to="/" className="normal-case text-xl">
-          <h1 className="text-5xl">
+        <img className="w-16 " src={svg} alt="" />
+        <Link to="/" className="normal-case">
+          <h1 className="lg:text-5xl">
             <span className="text-orange-400 font-bold">KidZ</span>
             <span className="text-teal-400">oo</span>
           </h1>

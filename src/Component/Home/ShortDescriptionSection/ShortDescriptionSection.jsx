@@ -25,8 +25,8 @@ const ShortDescriptionSection = () => {
       data-aos-easing="ease-in-sine"
       data-aos-duration="600"
     >
-      <div className="flex gap-5 justify-center items-center">
-        <div className="w-1/2">
+      <div className="md:flex gap-5 justify-center items-center">
+        <div className="md:w-1/2">
           <div className="grid grid-cols-2 gap-4">
             <img
               className="rounded-2xl"
@@ -50,7 +50,7 @@ const ShortDescriptionSection = () => {
             />
           </div>
         </div>
-        <div className="w-1/2 py-20 rounded-2xl pl-5">
+        <div className="md:w-1/2 py-20 rounded-2xl lg:pl-5">
           <h2 className="text-5xl font-bold mb-8">
             We provide & offer premium service.
           </h2>

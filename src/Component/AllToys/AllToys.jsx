@@ -30,9 +30,9 @@ const AllToys = () => {
 
   return (
     <div>
-      <div className="justify-center items-center flex gap-4">
+      <div className="justify-center mt-10 items-center flex gap-4">
         {/* Search input */}
-        <div>
+        <div className="">
           <input
             type="search"
             placeholder="Search here"

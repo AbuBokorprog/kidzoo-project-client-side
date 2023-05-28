@@ -16,8 +16,8 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState();
-  const [loader, setLoader] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loader, setLoader] = useState(true);
 
   const createUser = (email, password) => {
     setLoader(true);
@@ -35,9 +35,9 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (createUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
       setLoader(false);
-      setUser(createUser);
     });
     return () => {
       unsubscribe();
@@ -60,6 +60,21 @@ const AuthProvider = ({ children }) => {
     } finally {
     }
   };
+
+  useEffect(() => {
+    const isAuthenticated = () => {
+      const token = localStorage.getItem("token");
+      return !!token;
+    };
+
+    const checkAuthentication = () => {
+      const authenticated = isAuthenticated();
+      setLoader(false);
+      setUser(authenticated ? { username: "exampleUser" } : null);
+    };
+
+    checkAuthentication();
+  }, []);
 
   const Info = {
     user,
