@@ -33,23 +33,6 @@ const AllToys = () => {
 
   return (
     <div>
-      <div className="justify-center mt-10 items-center flex gap-4">
-        {/* Search input */}
-        <div className="">
-          <input
-            type="search"
-            placeholder="Search here"
-            className="input input-bordered input-primary w-full max-w-xs"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-        <div>
-          <button className="btn">
-            <input type="submit" name="Search" id="" value="Search" />
-          </button>
-        </div>
-      </div>
       <div className="my-10">
         <img
           className="rounded-2xl"
@@ -61,6 +44,23 @@ const AllToys = () => {
         <h2 className="text-5xl font-bold text-center my-5">All Toys</h2>
       </div>
       <div>
+        <div className="justify-center my-10 items-center flex gap-4">
+          {/* Search input */}
+          <div className="">
+            <input
+              type="search"
+              placeholder="Search here"
+              className="input input-bordered input-primary w-full max-w-xs"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+          <div>
+            <button className="btn">
+              <input type="submit" name="Search" id="" value="Search" />
+            </button>
+          </div>
+        </div>
         <div className="overflow-x-auto w-full">
           <table className="table w-full">
             <thead>
