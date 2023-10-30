@@ -32,7 +32,7 @@ const Home = () => {
       <div>
         <GallerySection></GallerySection>
       </div>
-      <div>
+      <div className="my-20">
         <AboutUs></AboutUs>
       </div>
       <div>

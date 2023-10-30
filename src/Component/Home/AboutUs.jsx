@@ -11,7 +11,7 @@ const AboutUs = () => {
           alt=""
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
-        <div className="absolute top-16 left-5 right-5">
+        <div className="absolute top-6 left-5 right-5">
           <div className="flex text-white gap-4">
             <div className="">
               <h2 className="md:text-4xl lg:text-xl md:font-semibold md:mb-2 text-white">
