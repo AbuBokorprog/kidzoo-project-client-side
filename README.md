@@ -1,6 +1,6 @@
-### KidZoo(Kids Toy) Website
+# KidZoo(Kids Toy) Website
 
-# About My Project:
+## About My Project:
 
 <!-- public -->
 
@@ -11,8 +11,11 @@
 - Each products details you will see and seller name and seller email we provide.
 - Our Core concepts are Make Customer Happy and being kinds.
 
-# KidZoo Live Link:
-
+### KidZoo Live Link:
 ```sh
 https://kidzoo-cb3d2.web.app
+```
+### server-side-repository
+```sh
+https://github.com/AbuBokorprog/kidzoo-project-server-side
 ```
